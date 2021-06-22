@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   background-color: #f5f2f0;
-  font-family: georgia;
+  font-family: "georgia";
   line-height: 1.5;
 }
 
@@ -9,9 +9,14 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  grid-template-columns: auto;
+  margin: 1.5rem;
+}
+
 h1, h2 {
   color: #623b0c;
-  font-family: 'Denk One', sans-serif;
+  font-family: "Denk One", sans-serif;
 }
 
 /** grid **/
@@ -21,6 +26,8 @@ ol {
   grid-template-rows: 1fr 1fr;
   list-style-type: none;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 ol li:first-child, ol li:nth-child(2) {
@@ -30,11 +37,29 @@ ol li:first-child, ol li:nth-child(2) {
   border-radius: 8px;
 }
 
-ol li:nth-child(3), ol li:nth-child(4){
+ol li:nth-child(3), ol li:nth-child(4) {
   grid-row: 2;
   background-color: #ede3db;
+  border: 2px solid #623b0c;
+  border-radius: 8px;
 }
 
 img {
   width: 100%;
+}
+
+a {
+  background-color: #623b0c;
+  border: 2px solid #000;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  padding: .5em;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  padding: .75em;
+  justify-content: space-between;
 }
